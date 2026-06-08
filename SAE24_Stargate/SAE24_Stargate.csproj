@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1BA944A-5FB2-429C-93F0-237FEC68DD74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SAE24_Stargate</RootNamespace>
+    <AssemblyName>SAE24_Stargate</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Core, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4d63bfbfdfd3c6e4, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Core.1.6.0\lib\net452\BCrypt.Net-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.2\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.3\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.DocumentObjectModel, Version=1.51.5186.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PdfSharp.MigraDoc.Standard.DocumentObjectModel.1.51.15\lib\netstandard2.0\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering, Version=1.51.5186.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PdfSharp.MigraDoc.Standard.1.51.15\lib\netstandard2.0\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.51.5185.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PDFSharp.Standard.1.51.15\lib\netstandard2.0\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PDFSharp.Standard.Charting.1.51.15\lib\netstandard2.0\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.5.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Resources.Extensions.4.6.0\lib\netstandard2.0\System.Resources.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.6.0.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=8.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Pkcs.8.0.1\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=6.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Xml.6.0.2\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ucAlien">
+      <HintPath>..\ucAlien\bin\Debug\ucAlien.dll</HintPath>
+    </Reference>
+    <Reference Include="ucAlien_formPlanete">
+      <HintPath>..\ucAlien_formPlanete\bin\Debug\ucAlien_formPlanete.dll</HintPath>
+    </Reference>
+    <Reference Include="ucBudget">
+      <HintPath>..\ucBudget\bin\Debug\ucBudget.dll</HintPath>
+    </Reference>
+    <Reference Include="ucInfoPlanetes">
+      <HintPath>..\ucInfoPlanetes\bin\Debug\ucInfoPlanetes.dll</HintPath>
+    </Reference>
+    <Reference Include="ucInformateur">
+      <HintPath>..\ucInformateur\bin\Debug\ucInformateur.dll</HintPath>
+    </Reference>
+    <Reference Include="ucMember">
+      <HintPath>..\ucMember\bin\Debug\ucMember.dll</HintPath>
+    </Reference>
+    <Reference Include="ucNbMissionPlanete">
+      <HintPath>..\ucNbMissionPlanete\bin\Debug\ucNbMissionPlanete.dll</HintPath>
+    </Reference>
+    <Reference Include="ucRecapMission">
+      <HintPath>..\ucRecapMission\bin\Debug\ucRecapMission.dll</HintPath>
+    </Reference>
+    <Reference Include="ucRecapMissionEntier">
+      <HintPath>..\ucRecapMissionEntier\bin\Debug\ucRecapMissionEntier.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connexion.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargement.Designer.cs">
+      <DependentUpon>frmChargement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetailAlien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetailAlien.Designer.cs">
+      <DependentUpon>frmDetailAlien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditionMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditionMission.Designer.cs">
+      <DependentUpon>frmEditionMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoAlien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoAlien.Designer.cs">
+      <DependentUpon>frmInfoAlien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoPlanetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoPlanetes.Designer.cs">
+      <DependentUpon>frmInfoPlanetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMDP.Designer.cs">
+      <DependentUpon>frmMDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMissionTermine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMissionTermine.Designer.cs">
+      <DependentUpon>frmMissionTermine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMoreInfoPlanetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMoreInfoPlanetes.Designer.cs">
+      <DependentUpon>frmMoreInfoPlanetes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNM.Designer.cs">
+      <DependentUpon>frmNM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNousContacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNousContacter.Designer.cs">
+      <DependentUpon>frmNousContacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStat.Designer.cs">
+      <DependentUpon>frmStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTableauDeBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableauDeBord.Designer.cs">
+      <DependentUpon>frmTableauDeBord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVerifQuitter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerifQuitter.Designer.cs">
+      <DependentUpon>frmVerifQuitter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mesDatas.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargement.resx">
+      <DependentUpon>frmChargement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetailAlien.resx">
+      <DependentUpon>frmDetailAlien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditionMission.resx">
+      <DependentUpon>frmEditionMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoAlien.resx">
+      <DependentUpon>frmInfoAlien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoPlanetes.resx">
+      <DependentUpon>frmInfoPlanetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMDP.resx">
+      <DependentUpon>frmMDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMissionTermine.resx">
+      <DependentUpon>frmMissionTermine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMoreInfoPlanetes.resx">
+      <DependentUpon>frmMoreInfoPlanetes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNM.resx">
+      <DependentUpon>frmNM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNousContacter.resx">
+      <DependentUpon>frmNousContacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStat.resx">
+      <DependentUpon>frmStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableauDeBord.resx">
+      <DependentUpon>frmTableauDeBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerifQuitter.resx">
+      <DependentUpon>frmVerifQuitter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smiley.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SharpZipLib\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>
