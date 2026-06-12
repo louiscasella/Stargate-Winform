@@ -15,13 +15,13 @@ Application de gestion des missions spatiales développée dans le cadre de la S
 ## 📸 Aperçu
 
 ### Tableau de bord
-![Tableau de bord](screenshots/TableauDeBord.png)
+![Tableau de bord](assets/TableauDeBord.png)
 
 ### Création d'une nouvelle mission
-![Nouvelle mission](screenshots/NouvelleMission.png)
+![Nouvelle mission](assets/NouvelleMission.png)
 
 ### Données des races
-![Données des races](screenshots/DonneesRaces.png)
+![Données des races](assets/DonneesRaces.png)
 
 ---
 
